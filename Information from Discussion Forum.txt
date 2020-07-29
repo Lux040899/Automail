@@ -1,0 +1,33 @@
+If Caution=false, then no robots have special arms.
+If Caution=true, then all robots have special arms.
+
+Each robot can carry 2 items when caution mode turned off, and can carry 3 items when caution mode turned on?
+Up to 2 and up to 3, yes.
+
+Are robots expected to carry items at their full capacity if mailpool is not empty?
+No, not necessarily.  If you have only three items in the pool and three robots waiting, do you want to give all three items to one robot?  You have choices in relation to this.
+
+Can special arms carry normal items?
+No.
+
+The caution behaviour is about wrapping/unwrapping delays, and delivery.  The robot can deliver other items in the normal way while carrying a wrapped fragile item. The intention here is that there is no impact on a robot travelling with a (wrapped) fragile items, but delivery (including unwrapping) of such an item requires sole access to the delivery floor.
+
+https://www.uml-diagrams.org/examples/hospital-domain-diagram.html
+
+No, the special arms can't carry normal items, so if fragile = false, the setting of caution doesn't matter (should not affect the behaviour).
+
+Robot 2 certainly can't go to level 8 until robot 1 has delivered.  What robot 2 does until then is your decision, that is, we have not specified this behaviour. ANy sensible decision is fine - you will not be assessed on how optimal it is. Where/when a robot waits is your decision, but it must not violate the rule of exclusive access to a floor for unwrapping/delivery of a fragile item.
+
+That is a modelling choice you should make.  If every class has getters and setters for every attribute (based on some naming convention), then showing them all on the diagram just clutters the diagram and makes the other detail harder to see -- better to just include a comment saying "All attributes have getters and setters based on the naming convention ...".  If you can describe the getters/setters succinctly, that's probably better, but if you have an adhoc collection of getters/setters, you may need to show them. Hybrid approaches are also possible ...
+
+It is reasonable for the simulation to be collecting the stats rather than Automail.
+
+Since Building and Clock are not instantiated, does that mean that they shouldn't have relationships with any other classes?
+No, it doesn't. A class that isn't instantiated is unlikely to appear as the type of an attribute, and so that class is unlikely to appear in an association. However, it could still be in a specialisation-generalisation hierarchy. And it could use other classes, or be used by other classes, and such dependencies can be shown in a design diagram.
+
+Robot 2 must have exclusive access to the floor while unwrapping/delivering.  If robot 1 leaves the floor in the same timestep that robot 2 is unwrapping, that is not exclusive access (robot 1 might bump robot 2 on the way out! :-).
+
+When mail items are stamped with "time of arrival", is that the time of arrival at the destination or the time of arrival at the mail pool?
+Arrival at the mailpool.
+
+If robot 1 is not delivering a fragile item, there's no reason robot 2 can't wait on level 6 for robot 1 to leave, giving it exclusive access so that it can start unwrapping and delivering.  So either behaviour meets the rules.  One of these, however, seems to me to be a better option that the other.

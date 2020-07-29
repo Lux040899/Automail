@@ -1,0 +1,16 @@
+Buildfile: C:\Users\amanb\OneDrive\The University of Melbourne\Year 3\Semester 1\SWEN30006 (Software Modelling and Design)\Project 1\build.xml
+
+init:
+    [mkdir] Created dir: C:\Users\amanb\OneDrive\The University of Melbourne\Year 3\Semester 1\SWEN30006 (Software Modelling and Design)\Project 1\tmp_unzipped\build
+
+compile:
+    [javac] C:\Users\amanb\OneDrive\The University of Melbourne\Year 3\Semester 1\SWEN30006 (Software Modelling and Design)\Project 1\build.xml:30: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 14 source files to C:\Users\amanb\OneDrive\The University of Melbourne\Year 3\Semester 1\SWEN30006 (Software Modelling and Design)\Project 1\tmp_unzipped\build
+
+dist:
+    [mkdir] Created dir: C:\Users\amanb\OneDrive\The University of Melbourne\Year 3\Semester 1\SWEN30006 (Software Modelling and Design)\Project 1\tmp_unzipped\dist\lib
+      [jar] Building jar: C:\Users\amanb\OneDrive\The University of Melbourne\Year 3\Semester 1\SWEN30006 (Software Modelling and Design)\Project 1\tmp_unzipped\dist\lib\Project1.jar
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
+Default behaviour successful! 
